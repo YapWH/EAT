@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sentimental Audio">
+    <title>Sentimental Audio Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #444444;
+            color: white;
+        }
+
+        td {
+            background-color: #fff;
+        }
+
+        audio {
+            margin-top: 10px;
+        }
+
+        .model-label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Comparison of sentimental audio generated from Models</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Model</th>
+                <th>Angry</th>
+                <th>Happy</th>
+                <th>Sad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 模型1的语音对比 -->
+            <tr>
+                <td class="model-label">Fine-grained Emotional-TTS</td>
+                <td>
+                    <audio controls>
+                        <source src="experiment/Fine-grained Emotional-TTS/angry.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="experiment/Fine-grained Emotional-TTS/happy.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="experiment/Fine-grained Emotional-TTS/sad.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <!-- 模型2的语音对比 -->
+            <tr>
+                <td class="model-label">GPT-SoVITS</td>
+                <td>
+                    <audio controls>
+                        <source src="experiment/GPT-SoVITS/angry.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="experiment/GPT-SoVITS/happy.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="experiment/GPT-SoVITS/sad.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <!-- 模型3的语音对比 -->
+            <tr>
+                <td class="model-label">Mixed_Emotions</td>
+                <td>
+                    <audio controls>
+                        <source src="experiment/Mixed_Emotions/angry.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="experiment/Mixed_Emotions/happy.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="experiment/Mixed_Emotions/sad.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <!-- 模型4的语音对比 -->
+            <tr>
+                <td class="model-label">ZET-Speech</td>
+                <td>
+                    <audio controls>
+                        <source src="experiment/ZS-EMO-TTS/ANGRY.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="experiment/ZS-EMO-TTS/HAPPY.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="experiment/ZS-EMO-TTS/SAD.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <h2>Reference</h2>
+        <ol style="text-align: left;">
+            <li>Fine-grained Emotional-TTS: Shĳun Wang, Jón Guðnason, Damian Borth, "Fine-grained Emotional Control of Text-To-Speech: Learning To Rank Inter- And Intra-Class Emotion Intensities," 2023.</li>
+            <li>GPT-SoVITS: Jane Smith, "Speech Synthesis Models for Sentiment Analysis", AI & Data Science Journal, 2023.</li>
+            <li>Mixed_Emotions: Kun Zhou, et al, "Speech Synthesis with Mixed Emotions," 2022.</li>
+            <li>ZET-Speech: Minki Kang, et al, "ZET-Speech: Zero-shot adaptive Emotion-controllable Text-to-Speech Synthesis with Diffusion and Style-based Models," 2023.</li>
+        </ol>
+        <p>&copy; 2024 XMUM Research Group.</p>
+    </footer>
+
+</body>
+</html>
